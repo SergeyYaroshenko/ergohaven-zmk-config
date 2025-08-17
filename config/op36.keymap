@@ -51,6 +51,18 @@
             bindings = <&kp RBKT>;
             key-positions = <7 8>;
         };
+
+        SW_EN {
+            bindings = <&kp LC(N0)>;
+            key-positions = <20>;
+            layers = <1>;
+        };
+
+        SW_RU {
+            bindings = <&kp LC(N1)>;
+            key-positions = <20>;
+            layers = <2>;
+        };
     };
 
     keymap {
