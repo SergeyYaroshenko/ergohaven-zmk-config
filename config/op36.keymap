@@ -52,14 +52,24 @@
             key-positions = <7 8>;
         };
 
-        combo_ysy {
-            bindings = <&ysy>;
+        ysy_combo {
+            bindings = <&ysy_macro>;
             key-positions = <0 1>;
+        };
+
+        gpbu_combo {
+            bindings = <&gpbu_macro>;
+            key-positions = <10 11>;
+        };
+
+        tech_combo {
+            bindings = <&tech_macro>;
+            key-positions = <20 21>;
         };
     };
 
     macros {
-        ysy: ysy {
+        ysy_macro: ysy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -97,6 +107,87 @@
                 <&macro_press>;
 
             label = "YSY";
+        };
+
+        gpbu_macro: gpbu_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp UNDERSCORE>,
+                <&macro_wait_time 10>,
+                <&kp LS(K)>,
+                <&macro_wait_time 10>,
+                <&kp S>,
+                <&macro_wait_time 10>,
+                <&kp K>,
+                <&macro_wait_time 10>,
+                <&kp U>,
+                <&macro_wait_time 10>,
+                <&kp LS(L)>,
+                <&macro_wait_time 10>,
+                <&kp FSLH>,
+                <&macro_wait_time 10>,
+                <&kp DOT>,
+                <&macro_wait_time 10>,
+                <&kp LS(Q)>,
+                <&macro_wait_time 10>,
+                <&kp LS(O)>,
+                <&macro_wait_time 10>,
+                <&kp LS(O)>,
+                <&macro_wait_time 10>,
+                <&kp P>,
+                <&macro_wait_time 10>,
+                <&kp DOLLAR>,
+                <&macro_wait_time 10>,
+                <&kp EQUAL>,
+                <&macro_wait_time 10>,
+                <&kp LS(NUMBER_3)>,
+                <&macro_wait_time 10>,
+                <&kp LS(NUMBER_5)>,
+                <&macro_press>;
+
+            label = "GPBU_MACRO";
+        };
+
+        tech_macro: tech_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(C)>,
+                <&macro_wait_time 10>,
+                <&kp AT_SIGN>,
+                <&macro_wait_time 10>,
+                <&kp P>,
+                <&macro_wait_time 10>,
+                <&kp LS(P)>,
+                <&macro_wait_time 10>,
+                <&kp A>,
+                <&macro_wait_time 10>,
+                <&kp LS(Z)>,
+                <&macro_wait_time 10>,
+                <&kp A>,
+                <&macro_wait_time 10>,
+                <&kp C>,
+                <&macro_wait_time 10>,
+                <&kp K>,
+                <&macro_wait_time 10>,
+                <&kp AT_SIGN>,
+                <&macro_wait_time 10>,
+                <&kp EXCLAMATION>,
+                <&macro_wait_time 10>,
+                <&kp M>,
+                <&macro_wait_time 10>,
+                <&kp LS(B)>,
+                <&macro_wait_time 10>,
+                <&kp L>,
+                <&macro_wait_time 10>,
+                <&kp D>,
+                <&macro_wait_time 10>,
+                <&kp N0>,
+                <&macro_wait_time 10>,
+                <&kp LS(N)>;
+
+            label = "TECH_MACRO";
         };
     };
 
