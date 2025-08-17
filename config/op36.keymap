@@ -141,9 +141,9 @@
                 <&macro_wait_time 10>,
                 <&kp EQUAL>,
                 <&macro_wait_time 10>,
-                <&kp LS(NUMBER_3)>,
+                <&kp NUMBER_3>,
                 <&macro_wait_time 10>,
-                <&kp LS(NUMBER_5)>,
+                <&kp NUMBER_5>,
                 <&macro_press>;
 
             label = "GPBU_MACRO";
