@@ -52,16 +52,51 @@
             key-positions = <7 8>;
         };
 
-        SW_EN {
-            bindings = <&kp LC(N0)>;
-            key-positions = <20>;
-            layers = <1>;
+        combo_ysy {
+            bindings = <&ysy>;
+            key-positions = <0 1>;
         };
+    };
 
-        SW_RU {
-            bindings = <&kp LC(N1)>;
-            key-positions = <20>;
-            layers = <2>;
+    macros {
+        ysy: ysy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(P)>,
+                <&macro_wait_time 10>,
+                <&kp LS(Q)>,
+                <&macro_wait_time 10>,
+                <&kp ASTRK>,
+                <&macro_wait_time 10>,
+                <&kp B>,
+                <&macro_wait_time 10>,
+                <&kp N>,
+                <&macro_wait_time 10>,
+                <&kp J>,
+                <&macro_wait_time 10>,
+                <&kp SQT>,
+                <&macro_wait_time 10>,
+                <&kp G>,
+                <&macro_wait_time 10>,
+                <&kp U>,
+                <&macro_wait_time 10>,
+                <&kp LS(O)>,
+                <&macro_wait_time 10>,
+                <&kp LS(R)>,
+                <&macro_wait_time 10>,
+                <&kp NUMBER_4>,
+                <&macro_wait_time 10>,
+                <&kp GRAVE>,
+                <&macro_wait_time 10>,
+                <&kp NUMBER_4>,
+                <&macro_wait_time 10>,
+                <&kp LS(I)>,
+                <&macro_wait_time 10>,
+                <&kp LS(T)>,
+                <&macro_press>;
+
+            label = "YSY";
         };
     };
 
