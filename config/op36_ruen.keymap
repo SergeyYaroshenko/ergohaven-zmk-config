@@ -81,6 +81,16 @@
             bindings = <&tech_macro>;
             key-positions = <20 21>;
         };
+
+        sw_en {
+            bindings = <&to_en>;
+            key-positions = <31 20>;
+        };
+
+        sw_ru {
+            bindings = <&to_ru>;
+            key-positions = <31 29>;
+        };
     };
 
     macros {
