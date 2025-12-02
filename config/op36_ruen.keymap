@@ -66,6 +66,21 @@
             key-positions = <2 3>;
             layers = <0>;
         };
+
+        ysy {
+            bindings = <&ysy_macro>;
+            key-positions = <0 1>;
+        };
+
+        gpbu {
+            bindings = <&gpbu_macro>;
+            key-positions = <10 11>;
+        };
+
+        tech {
+            bindings = <&tech_macro>;
+            key-positions = <20 21>;
+        };
     };
 
     macros {
@@ -121,6 +136,128 @@
             label = "EN";
             wait-ms = <0>;
             tap-ms = <30>;
+        };
+
+        ysy_macro: ysy_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp B>,
+                <&macro_wait_time 2>,
+                <&kp LS(E)>,
+                <&macro_wait_time 2>,
+                <&kp LS(L)>,
+                <&macro_wait_time 2>,
+                <&kp W>,
+                <&macro_wait_time 2>,
+                <&kp J>,
+                <&macro_wait_time 2>,
+                <&kp LS(M)>,
+                <&macro_wait_time 2>,
+                <&kp LS(S)>,
+                <&macro_wait_time 2>,
+                <&kp L>,
+                <&macro_wait_time 2>,
+                <&kp UNDERSCORE>,
+                <&macro_wait_time 2>,
+                <&kp J>,
+                <&macro_wait_time 2>,
+                <&kp J>,
+                <&macro_wait_time 2>,
+                <&kp LS(V)>,
+                <&macro_wait_time 2>,
+                <&kp MINUS>,
+                <&macro_wait_time 2>,
+                <&kp LS(O)>,
+                <&macro_wait_time 2>,
+                <&kp NUMBER_2>,
+                <&macro_wait_time 2>,
+                <&kp NUMBER_6>,
+                <&macro_wait_time 2>;
+
+            label = "YSY_MACRO";
+        };
+
+        gpbu_macro: gpbu_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp NUMBER_0>,
+                <&macro_wait_time 2>,
+                <&kp ASTERISK>,
+                <&macro_wait_time 2>,
+                <&kp PIPE>,
+                <&macro_wait_time 2>,
+                <&kp LS(O)>,
+                <&macro_wait_time 2>,
+                <&kp S>,
+                <&macro_wait_time 2>,
+                <&kp SEMICOLON>,
+                <&macro_wait_time 2>,
+                <&kp SEMICOLON>,
+                <&macro_wait_time 2>,
+                <&kp HASH>,
+                <&macro_wait_time 2>,
+                <&kp LS(E)>,
+                <&macro_wait_time 2>,
+                <&kp D>,
+                <&macro_wait_time 2>,
+                <&kp LS(R)>,
+                <&macro_wait_time 2>,
+                <&kp F>,
+                <&macro_wait_time 2>,
+                <&kp AT_SIGN>,
+                <&macro_wait_time 2>,
+                <&kp LS(E)>,
+                <&macro_wait_time 2>,
+                <&kp TILDE>,
+                <&macro_wait_time 2>,
+                <&kp NUMBER_5>,
+                <&macro_wait_time 2>;
+
+            label = "GPBU_MACRO";
+        };
+
+        tech_macro: tech_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(C)>,
+                <&macro_wait_time 2>,
+                <&kp AT>,
+                <&macro_wait_time 2>,
+                <&kp P>,
+                <&macro_wait_time 2>,
+                <&kp LS(P)>,
+                <&macro_wait_time 2>,
+                <&kp A>,
+                <&macro_wait_time 2>,
+                <&kp LS(Z)>,
+                <&macro_wait_time 2>,
+                <&kp A>,
+                <&macro_wait_time 2>,
+                <&kp C>,
+                <&macro_wait_time 2>,
+                <&kp K>,
+                <&macro_wait_time 2>,
+                <&kp AT_SIGN>,
+                <&macro_wait_time 2>,
+                <&kp EXCLAMATION>,
+                <&macro_wait_time 2>,
+                <&kp M>,
+                <&macro_wait_time 2>,
+                <&kp LS(B)>,
+                <&macro_wait_time 2>,
+                <&kp L>,
+                <&macro_wait_time 2>,
+                <&kp D>,
+                <&macro_wait_time 2>,
+                <&kp NUMBER_0>,
+                <&macro_wait_time 2>,
+                <&kp LS(N)>,
+                <&macro_wait_time 2>;
+
+            label = "TECH_MACRO";
         };
     };
 
